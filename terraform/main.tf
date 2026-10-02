@@ -223,6 +223,9 @@ resource "aws_instance" "gpu_node" {
   }) : file("${path.module}/user_data_cpu.sh")
 
   tags = { Name = var.enable_gpu ? "AI-GPU-Inference-Node" : "AI-CPU-LightGBM-Node" }
+
+  # user_data needs internet (apt/pip/docker pull) at first boot, so wait for the NAT route
+  depends_on = [aws_route_table_association.private_assoc]
 }
 
 # 6. Load Balancer

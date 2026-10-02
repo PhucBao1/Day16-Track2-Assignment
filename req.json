@@ -1,0 +1,8 @@
+{
+  "model": "google/gemma-4-E2B-it",
+  "messages": [
+    {"role": "system", "content": "Bạn là một trợ lý AI hữu ích."},
+    {"role": "user", "content": "Hãy giải thích Bastion Host trong AWS là gì?"}
+  ],
+  "max_tokens": 150
+}
