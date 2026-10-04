@@ -22,3 +22,6 @@ lab-key.pub
 .env.local
 # Kaggle API credentials
 kaggle.json
+
+# Editor settings
+.vscode/
